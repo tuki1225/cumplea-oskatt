@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="theme-color" content="#11151d">
+	<title>Para Katherine</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="phone-screen" id="phone">
+		<section class="lock-screen" id="lockScreen" aria-label="Pantalla de bloqueo">
+			<div class="clock" aria-label="12:00 PM">
+				<div class="time">12:00</div><div class="period">PM</div>
+				<div class="route">Alemania — Perú</div>
+			</div>
+			<div class="belongs">Este celular le pertenece a<strong>Katherine</strong></div>
+			<div class="swipe-hint" aria-label="Desliza hacia arriba para abrir"><span class="chevron">⌃</span><span>Desliza para abrir</span></div>
+		</section>
+		<section class="password-screen" id="passwordScreen" aria-label="Introducir contraseña" aria-hidden="true">
+			<div class="avatar" aria-hidden="true">K</div>
+			<h1 class="greeting">Katherine</h1>
+			<p class="prompt">Introduce tu contraseña</p>
+			<p class="password-hint">(¿Cómo me llamo? jeje)</p>
+			<form class="password-form" id="passwordForm">
+				<input class="password-input" id="password" type="password" autocomplete="current-password" placeholder="Contraseña" aria-label="Contraseña" required>
+				<button type="submit">Continuar</button>
+				<div class="message" id="message" role="status" aria-live="polite"></div>
+				<div class="secret-hint" id="secretHint" aria-hidden="true">Psst... es Jeremy.</div>
+			</form>
+			<div class="back-hint">Desliza hacia abajo para volver</div>
+		</section>
+		<section class="home-screen" id="homeScreen" aria-label="Pantalla principal" aria-hidden="true"></section>
+		<section class="app-screen" id="appScreen" aria-hidden="true"></section>
+	</main>
+	<template id="mapTemplate">
+		<div class="map-app">
+			<div class="map-window" role="img" aria-label="Recorrido animado desde Alemania hasta Lima, Perú">
+				<svg class="journey-map" viewBox="0 0 1000 1000" aria-hidden="true">
+					<defs>
+						<radialGradient id="mapOcean" cx="50%" cy="45%" r="70%">
+							<stop offset="0" stop-color="#183941" />
+							<stop offset="1" stop-color="#101b27" />
+						</radialGradient>
+						<linearGradient id="mapLand" x1="0" y1="0" x2="1" y2="1">
+							<stop offset="0" stop-color="#617d70" />
+							<stop offset="1" stop-color="#354f4c" />
+						</linearGradient>
+					</defs>
+					<rect width="1000" height="1000" fill="url(#mapOcean)" />
+					<g id="mapCamera">
+						<g class="map-grid">
+							<path d="M0 100H2100 M0 250H2100 M0 400H2100 M0 550H2100 M0 700H2100 M0 850H2100 M0 1000H2100 M0 1150H2100 M150 0V1300 M300 0V1300 M450 0V1300 M600 0V1300 M750 0V1300 M900 0V1300 M1050 0V1300 M1200 0V1300 M1350 0V1300 M1500 0V1300 M1650 0V1300 M1800 0V1300 M1950 0V1300" />
+						</g>
+						<path class="map-land" d="M946 173 985 133 1029 138 1063 99 1112 116 1153 88 1192 113 1228 91 1264 120 1312 100 1350 125 1393 113 1430 139 1474 143 1504 174 1545 185 1577 222 1550 252 1572 285 1536 317 1558 352 1519 382 1547 416 1510 449 1472 459 1439 490 1394 479 1355 512 1314 496 1275 526 1235 510 1197 526 1151 504 1110 481 1082 448 1044 430 1020 390 983 361 988 326 952 298 973 264 944 230Z" />
+						<path class="map-coast-detail" d="M1004 333 Q1080 370 1128 448 T1250 505 M1133 162 Q1215 202 1280 171 T1440 190 M1328 307 Q1390 350 1506 333 M1186 399 Q1248 371 1314 405 T1458 410" />
+						<path class="map-road" d="M1010 269 Q1090 230 1154 286 T1284 276 Q1376 238 1484 281 M1050 384 Q1134 352 1218 390 T1384 369 Q1440 354 1510 385 M1125 466 Q1200 432 1276 455 T1410 440 M1248 160 Q1262 240 1320 282 T1405 350" />
+						<path class="map-land map-south-america" d="M680 555 728 566 757 600 790 618 803 659 827 687 815 721 838 754 816 790 828 827 799 858 805 900 773 927 766 970 736 1007 731 1052 697 1090 680 1140 648 1198 624 1263 593 1232 587 1184 560 1147 553 1092 525 1049 523 998 494 962 490 913 464 878 457 831 440 789 449 748 472 711 490 670 527 637 554 602 615 578 648 557Z" />
+						<path class="map-coast-detail" d="M486 746 Q541 775 566 836 T614 944 Q642 1024 686 1071 M550 632 Q602 688 670 706 T792 683 M546 918 Q594 899 638 934" />
+						<path class="map-road" d="M614 659 Q654 710 685 766 T704 860 Q679 930 676 1000 M585 820 Q631 838 686 836" />
+						<path id="journeyRoute" class="journey-route" d="M1450 250 C1412 278 1380 322 1335 365 C1300 402 1274 442 1240 476 C1170 535 1090 575 1000 610 C902 647 807 674 720 704 C674 719 636 741 603 754 C568 766 533 750 505 719 C480 691 454 670 426 652" />
+					</g>
+					<g class="map-reticle" aria-hidden="true">
+						<circle cx="500" cy="500" r="90" />
+						<circle cx="500" cy="500" r="5" />
+						<path d="M500 388v28 M500 584v28 M388 500h28 M584 500h28" />
+					</g>
+					<g id="journeyPlane" class="journey-plane" transform="translate(500 500)">
+						<path class="plane-shadow" d="M0-25 7 7 21 18 19 24 5 20 4 33 11 37 11 41 0 38-11 41-11 37-4 33-5 20-19 24-21 18-7 7Z" />
+						<path class="plane-body" d="M0-25 7 7 21 18 19 24 5 20 4 33 11 37 11 41 0 38-11 41-11 37-4 33-5 20-19 24-21 18-7 7Z" />
+					</g>
+				</svg>
+				<div class="map-stage" id="mapStage" aria-live="polite"></div>
+				<div class="map-heading" aria-hidden="true"><span>RUTA EN CURSO</span><i></i></div>
+			</div>
+			<div class="map-completion" id="mapCompletion" aria-hidden="true">
+				<strong>Destino: Lima, Perú</strong>
+				<span>Viaje completado ♡</span>
+			</div>
+		</div>
+	</template>
+	<template id="musicTemplate">
+		<div class="music-app">
+			<div class="music-intro">
+				<div class="playlist-cover-frame"><img class="playlist-cover" data-playlist-cover alt="Portada de la playlist"></div>
+				<div class="playlist-copy">
+					<span class="music-eyebrow">PLAYLIST PERSONAL</span>
+					<h3 data-playlist-title></h3>
+					<p data-playlist-description></p>
+					<small data-playlist-meta></small>
+				</div>
+			</div>
+			<div class="music-actions">
+				<button class="music-play-all" type="button" data-play-all><span class="music-play-symbol" aria-hidden="true">▶</span><span>Reproducir</span></button>
+				<button class="music-shuffle" type="button" data-shuffle aria-label="Reproducción aleatoria" title="Reproducción aleatoria">⤨</button>
+			</div>
+			<div class="music-track-list" data-track-list></div>
+			<div class="music-status" data-music-status role="status" aria-live="polite">Elige una canción</div>
+		</div>
+	</template>
+	<template id="petTemplate">
+		<div class="pet-game">
+			<div class="pet-hud"><span>MI MASCOTA</span><div class="pet-hud-values"><span class="pet-coins"><b aria-hidden="true">🪙</b> <strong data-pet-coins>120</strong></span><span class="pet-affection">Cariño <b aria-hidden="true">♡</b> <strong data-pet-affection>0</strong></span></div></div>
+			<div class="pet-room">
+				<div class="pet-window"><span></span><i></i><b></b></div>
+				<div class="pet-shelf"><span></span><span></span><span></span></div>
+				<div class="pet-plant"><i></i><i></i><b></b></div>
+				<div class="pet-lamp"><i></i><b></b></div>
+				<div class="pet-rug"></div>
+				<button class="pet-character" type="button" data-pet-character aria-label="Acariciar al gatito">
+					<span class="pet-hearts" aria-hidden="true"></span>
+					<svg class="pet-cat-visual" viewBox="0 0 240 260" role="img" aria-label="Gatito negro">
+						<path class="cat-tail" d="M151 194c49 18 62-18 42-35-11-10-24-5-22 5" />
+						<ellipse class="cat-body" cx="119" cy="190" rx="54" ry="48" />
+						<path class="cat-belly" d="M87 196c8-20 49-22 63 0 9 14-2 27-31 27s-40-12-32-27Z" />
+						<ellipse class="cat-paw" cx="89" cy="226" rx="20" ry="11" />
+						<ellipse class="cat-paw" cx="148" cy="226" rx="20" ry="11" />
+						<g data-outfit-layer></g>
+						<g data-wig-layer></g>
+						<g class="cat-head">
+							<path class="cat-ear" d="M65 101 72 43 111 80Z" />
+							<path class="cat-ear-inner" d="M75 83 78 57 96 78Z" />
+							<path class="cat-ear" d="m134 80 37-38 5 60Z" />
+							<path class="cat-ear-inner" d="m148 77 17-18 2 28Z" />
+							<ellipse class="cat-face" cx="120" cy="112" rx="62" ry="52" />
+							<g class="cat-eyes-open"><ellipse cx="96" cy="111" rx="8" ry="12" /><ellipse cx="144" cy="111" rx="8" ry="12" /><circle class="cat-eye-glint" cx="98" cy="107" r="2.5" /><circle class="cat-eye-glint" cx="146" cy="107" r="2.5" /></g>
+							<g class="cat-eyes-closed"><path d="M87 113q9 9 18 0M135 113q9 9 18 0" /></g>
+							<path class="cat-muzzle" d="M109 128q11 12 22 0q-11-7-22 0Z" />
+							<path class="cat-mouth" d="M120 137q-7 9-14 2m14-2q7 9 14 2" />
+							<path class="cat-whiskers" d="m69 124-27-6m28 14-30 3m131-11 27-6m-28 14 30 3" />
+						</g>
+					</svg>
+				</button>
+				<div class="pet-phrase" data-pet-phrase aria-live="polite">Toca al gatito</div>
+			</div>
+			<div class="pet-actions">
+				<button type="button" data-pet-action="food"><span aria-hidden="true">◉</span>Comida</button>
+				<button type="button" data-pet-action="look"><span aria-hidden="true">◇</span>Cambiar look</button>
+				<button type="button" data-pet-action="shop"><span aria-hidden="true">＋</span>Tienda</button>
+				<button type="button" data-pet-action="play"><span aria-hidden="true">✳</span>Jugar</button>
+				<button type="button" data-pet-action="sleep"><span aria-hidden="true">Zz</span>Dormir</button>
+			</div>
+			<div class="pet-overlay" data-pet-panel hidden>
+				<section class="pet-sheet" role="dialog" aria-modal="true" aria-labelledby="petPanelTitle">
+					<header><h3 id="petPanelTitle" data-pet-panel-title></h3><button type="button" data-pet-close aria-label="Cerrar">×</button></header>
+					<div class="pet-panel-content" data-pet-panel-content></div>
+				</section>
+			</div>
+			<div class="pet-flight-game" data-flight-game hidden>
+				<div class="flight-header"><button type="button" data-flight-exit>Salir</button><div><span>PUNTOS</span><strong data-flight-score>0</strong></div><div><span>MONEDAS</span><strong data-flight-coins>0</strong></div></div>
+				<div class="flight-stage" data-flight-stage role="button" tabindex="0" aria-label="Toca para hacer subir el avioncito">
+					<div class="flight-world" data-flight-world></div>
+					<svg class="flight-plane" data-flight-plane viewBox="0 0 120 82" aria-hidden="true"><path class="flight-wing" d="M12 40h96l-11 13H24Z"/><path class="flight-body" d="M18 37h79q9 0 13 5-4 5-13 5H18l-9-5Z"/><path class="flight-tail" d="M30 37 19 22h22l15 15m26 0 11-13h13L99 37"/><path class="flight-cat-ears" d="m62 41 1-10 8 6m-1 4 8-7 2 11Z"/><ellipse class="flight-cat-face" cx="70" cy="43" rx="10" ry="8"/><circle class="flight-cat-eye" cx="67" cy="42" r="1.4"/><circle class="flight-cat-eye" cx="74" cy="42" r="1.4"/><path class="flight-prop" d="M110 34v16"/></svg>
+					<div class="flight-ready" data-flight-ready>Toca para volar</div>
+					<section class="flight-result" data-flight-result hidden><h3>Vuelo terminado</h3><p>Puntuación <strong data-result-score>0</strong></p><p>Monedas conseguidas <strong data-result-coins>0</strong></p><div><button type="button" data-flight-retry>Reintentar</button><button type="button" data-flight-return>Volver a Mascota</button></div></section>
+				</div>
+			</div>
+		</div>
+	</template>
+	<script src="script.js"></script>
+</body>
+</html>
