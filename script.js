@@ -10,12 +10,12 @@
 			owner:'Katherine', contact:{name:'Jeremy',phone:'+51 906-538-792',nickname:'corazon(asi me decias para ponerme nervioso que culpa tengo jajsa)',met:'9/08/26',story:'recuerdo que yo andaba hablando puras tonterias y tu me acompañaste',together:'jugar,hablar,reirnos',special:'me gusta que me digas que me quieres, y mas aun cuando decis que no es mentira'},
 			playlist:{title:'Los Babosos😺❤️',description:'Canciones para compartir ♡',cover:'imagenes/foto de playlist.jpg'},
 			// ===== AÑADIR FOTOS AQUÍ =====
-			gallery:['imagenes/cuando la conoci.png','imagenes/reunion.png','imagenes/sentados.png','imagenes/abrazo.png'],
+			gallery:['imagenes/cuando la conoci.png','imagenes/reunion.png','imagenes/sentados.png','imagenes/abrazo.png','imagenes/nosotros.png'],
 			// ===== EDITAR CANCIONES AQUÍ =====
 			songs:[
-				{title:'From The Start',artist:'Laufey',duration:'',src:'audio/Laufey - From The Start.mp3',cover:''},
-				{title:'Hail To The King',artist:'Avenged Sevenfold',duration:'',src:'audio/Avenged Sevenfold - Hail To The King.mp3',cover:''},
-				{title:'Given Up',artist:'Linkin Park',duration:'',src:'audio/Given Up Linkin Park.mp3',cover:''},
+				{title:'From The Start',artist:'Laufey',duration:'',src:'audio/Laufey - From The Start.mp3',cover:'imagenes/from the start.jpg'},
+				{title:'Hail To The King',artist:'Avenged Sevenfold',duration:'',src:'audio/Avenged Sevenfold - Hail To The King.mp3',cover:'imagenes/hail to the king.jpg'},
+				{title:'Given Up',artist:'Linkin Park',duration:'',src:'audio/Given Up Linkin Park.mp3',cover:'imagenes/given up.jpg'},
 				{title:'',artist:'',duration:'',src:'',cover:''},
 				{title:'',artist:'',duration:'',src:'',cover:''},
 				{title:'',artist:'',duration:'',src:'',cover:''}
@@ -40,13 +40,22 @@
 			chatResponses:{firstMessage:[
 				{from:'Jeremy',text:'cuanto tiempooo'},
 				{from:'Jeremy',text:'por cierto no es que sea yo como tal, asi que tampoco es que pueda tener la respuesta de todo, pero si deje chance a que preguntes muchas cosas, y yo puse respuestas a cada pregunta que se me ocurriera en el transcurso de los dos meses que hacia esto, pregunta lo que quieras o dime lo que sea, si tengo la respuesta, te lo dire'},
+				{from:'Jeremy',text:'Oye, como no pude completar esta parte, pues nomás hay uno que otro mensaje. No pude poner los 100 como tenía planeado.'},
 				{from:'Jeremy',type:'sticker',src:'imagenes/sticker2.png'}
-			],rules:[]},
+			],rules:[
+				{id:'como_estas',patterns:[/como\s+(estas|has\s+estado|te\s+encuentras|te\s+sientes|vas)/,/que\s+tal\s+estas?/],reply:'En general bien, ya en lo personal ansioso.'},
+				{id:'que_tal_te_fue',patterns:[/que\s+tal\s+te\s+fue|como\s+te\s+fue|como\s+te\s+ha\s+ido|que\s+tal\s+te\s+ha\s+ido/],reply:'Mal si te soy sincero, no tuve suerte en lo que es conocer gente jaja. Tampoco quiero que me vuelvas a hablar por lástima; si lo quieres hacer, haz lo que te haga feliz.'},
+				{id:'como_te_llamas',patterns:[/como\s+te\s+llamas|cual\s+es\s+tu\s+nombre|cu\s+es\s+tu\s+nombre|tu\s+nombre/],reply:'¿En serio eso preguntarás? JSJASJASJ de tantas cosas justo eso.'},
+				{id:'te_extrano',patterns:[/(?:^|\s)(?:yo\s+)?te\s+(?:extra[nñ]o|extra[nñ]e|extra[nñ]e|he\s+extra[nñ]ado|echo\s+de\s+menos|extra[nñ](?:o|e))(?:\s+(?:mucho|muchisimo|muchísimo))?/,/(?:tambien|también)\s+te\s+extra[nñ](?:o|e)/],reply:'Te extraño más'},
+				{id:'me_extranaste',patterns:[/me\s+(extra[nñ]aste|extra[nñ]abas|has\s+extra[nñ]ado|echaste\s+de\s+menos|pensaste|pensabas\s+en\s+mi)/,/pensabas\s+en\s+mi|te\s+extra[nñ](?:e|aba|aste)/],reply:'Obvio que sí. Al inicio era a diario, luego conocí más gente, pero igualmente no hubo día en el que no te pensara. Y hoy te stalkeé y vi que hiciste más amigos, me siento bien por ti.'},
+				{id:'te_quiero',patterns:[/(?:^|\s)(?:yo\s+)?te\s+quiero(?:\s+(?:mucho|muchisimo|muchísimo))?/,/(?:tambien|también)\s+te\s+quiero(?:\s+(?:mucho|muchisimo|muchísimo))?/],reply:'Te quiero más'},
+				{id:'yo_te_gustaba',patterns:[/(?:yo\s+te\s+gustaba|te\s+gustaba|te\s+gust(?:e|e\s+alguna\s+vez)|alguna\s+vez\s+te\s+gust(?:e|é)|te\s+lleg(?:ue|ué|aste)\s+a\s+gustar|que\s+sent(?:ias|ias|ia)\s+por\s+mi|que\s+sent(?:ias|ias|ia)\s+por\s+m[ií]|sent(?:ias|ias)\s+algo\s+por\s+mi|sent(?:ias|ias)\s+algo\s+por\s+m[ií]|te\s+gust(?:e|é)\s+alguna\s+vez)/],reply:'Siendo sincero, pasaron tantas cosas cuando te fuiste, pero no lloré ni nada. Fue como si nunca te hubieras ido. Luego me di cuenta de que eso no significa que te haya querido menos, sino que solo demuestra lo cómodo que estaba contigo. Eres de las amistades más lindas que tuve en mucho tiempo, además de rara jajaja. Ah, y sobre tu pregunta... pues eso es top secret.'}
+			]},
 			// ===== EDITAR CALENDARIO AQUÍ =====
-			calendarNotes:{'2026-09-27':'Fecha en la que planeé darte este regalo','2026-09-28':'Hoy hice...','2026-09-29':'Hoy agregué...'},
-			notes:[{title:'Una idea',text:'Aquí irá una nota especial.',date:'Septiembre 2026'},{title:'Recordatorio',text:'Preparar algo bonito para Katherine.',date:''}],
+			calendarNotes:{'2026-09-26':'Fecha en la que planeé darte este regalo','2026-09-27':'Fecha en la que planeé darte este regalo','2026-09-28':'Hoy planeé poner un juego de Roblox.','2026-09-29':'Hoy intenté hacer un juego externo.','2026-09-30':'Hice amistades :D','2026-10-01':'Continué con el proyecto.','2026-10-02':'Les presumí mi regalo a quienes conocí.','2026-10-03':'Conocí a una amiga :D','2026-10-04':'Me recargó Robux de la nada jaja','2026-10-05':'Soñé feo contigo, ¿estarás bien?','2026-10-06':'Me decidí a mandártelo','2026-11-26':'Sé que aún faltaba para tu cumpleaños, pero quiero que sepas que no lo mandé porque no supiera o algo del estilo, sino porque no podía ver el trabajo ahí y completarlo costaba más y más. Perdón.'},
+			notes:[{title:'Mes de notas',text:'En el tiempo en el que te hacía este regalo pasaron varias cosas e inconvenientes en los que sí hubiera querido que estuvieras conmigo para que me ayudaras jaja. También intenté hacerte un juego en Roblox como regalo, o uno fuera de Roblox, pero ninguno me salió. No sé ese tipo de programación, así que al final me decidí por hacer esto.',date:'Septiembre 2026'},{title:'Recordatorio',text:'Recuerda que aún te quiero muchísimo, eso no cambió y no cambiará. Tú sigues siendo la misma chica que conocí, y seguirás siendo la misma persona a la que querré. Te quiero mucho, Katherine.',date:''}],
 			// ===== FRASES DEL GATO =====
-			petPhrases:['Miau','Hola Katherine','¿Otra caricia?','prrr...'],settings:{birthday:'[CUMPLEAÑOS]',owner:'[EDITAR DESPUÉS]'},secret:'Mensaje secreto pendiente 👀'
+			petPhrases:['Miau','Hola Katherine','¿Otra caricia?','prrr...'],settings:{birthday:'[CUMPLEAÑOS]',owner:'Katherine Luzia Schröder Diaz'},secret:'Mensaje secreto pendiente 👀'
 		};
 		const petFoods=[
 			{id:'fish',name:'Pescadito',icon:'🐟',price:12},
@@ -67,9 +76,18 @@
 			{id:'lavender-bob',name:'Melena lavanda',price:52,art:'<path d="M61 111Q55 60 88 53q31-20 63 0 34 15 27 58l-12 21-5-31q-39-18-81 0l-7 31Z" fill="#b89bc9" stroke="#79688c" stroke-width="3"/><path d="M77 89q42-17 85 0" fill="none" stroke="#ddcbe8" stroke-width="5"/>'},
 			{id:'rose-bangs',name:'Flequillo rosa',price:58,art:'<path d="M67 104Q60 61 91 55q33-17 63 0 26 15 19 51l-10-11-8 13-10-17-12 16-11-18-13 16-11-14-12 16Z" fill="#d78fae" stroke="#925e78" stroke-width="3"/><path d="M78 78q40-21 83 0" fill="none" stroke="#f0c3d1" stroke-width="6"/>'}
 		];
+		const petCoats=[
+			{id:'tabby',name:'Tigre normal',color:'#a88059'},
+			{id:'white-tiger',name:'Tigre blanco',color:'#ece9df'},
+			{id:'black',name:'Gato negro',color:'#202226'},
+			{id:'white',name:'Gato blanco',color:'#f0ece4'},
+			{id:'gray',name:'Gato gris',color:'#92969b'},
+			{id:'orange',name:'Gato naranja',color:'#d88940'}
+		];
 		const petStorageKey='birthday-os-pet-v1';
+		const petRewardCode='1226';
 		const loadPetState=()=>{
-			const fresh={affection:0,coins:120,foodInventory:Object.fromEntries(petFoods.map(food=>[food.id,0])),unlockedClothes:[],unlockedWigs:[],equippedClothes:null,equippedWig:null};
+			const fresh={affection:0,coins:120,foodInventory:Object.fromEntries(petFoods.map(food=>[food.id,0])),unlockedClothes:[],unlockedWigs:[],equippedClothes:null,equippedWig:null,coat:null,rewardCodeRedeemed:false};
 			try{
 				const saved=JSON.parse(localStorage.getItem(petStorageKey)||'null');
 				if(!saved||typeof saved!=='object')return fresh;
@@ -80,30 +98,33 @@
 				fresh.unlockedWigs=petWigs.map(item=>item.id).filter(id=>saved.unlockedWigs?.includes(id));
 				fresh.equippedClothes=fresh.unlockedClothes.includes(saved.equippedClothes)?saved.equippedClothes:null;
 				fresh.equippedWig=fresh.unlockedWigs.includes(saved.equippedWig)?saved.equippedWig:null;
+				fresh.coat=petCoats.some(item=>item.id===saved.coat)?saved.coat:null;
+				fresh.rewardCodeRedeemed=Boolean(saved.rewardCodeRedeemed);
 			}catch{}
 			return fresh;
 		};
 		const petState=loadPetState();
 		const savePetState=()=>localStorage.setItem(petStorageKey,JSON.stringify(petState));
-		let currentApp='',galleryIndex=0,calcValue='',journeyFrame=null,musicAudio=null,activeTrackIndex=-1,petActionTimer=null,flightFrame=null,flightState=null,chatIntroSent=false;
+		const musicAudio=document.getElementById('musicAudio');
+		let currentApp='',galleryIndex=0,calcValue='',activeTrackIndex=-1,petActionTimer=null,flightFrame=null,flightState=null,chatIntroSent=false,constellationCleanup=null;
 		const homeScreen=document.getElementById('homeScreen'),appScreen=document.getElementById('appScreen');
-		const appList=[['Regalo','🎁'],['Contactos','👤'],['Galería','🖼️'],['Música','🎵'],['Mensajes','💬'],['Calendario','📅'],['Notas','📝'],['Reloj','🕒'],['Mapa','🌍'],['Clima','☀️'],['Calculadora','🧮'],['Ajustes','⚙️'],['Mascota','🐈‍⬛']];
+		const appList=[['Regalo','🎁'],['Contactos','👤'],['Galería','🖼️'],['Música','🎵'],['Mensajes','💬'],['Calendario','📅'],['Notas','📝'],['Reloj','🕒'],['Constelación','✨'],['Clima','☀️'],['Calculadora','🧮'],['Ajustes','⚙️'],['Mascota','🐈‍⬛']];
 		function renderHome(){homeScreen.innerHTML=`<div class="statusbar"><span>${new Intl.DateTimeFormat('es',{hour:'numeric',minute:'2-digit'}).format(new Date())}</span><span>▮▮▮　▰</span></div><div class="home-title">BIRTHDAY OS</div><div class="app-grid">${appList.map(([n,i])=>`<button class="app-icon" data-app="${n}"><span>${i}</span><small>${n}</small></button>`).join('')}</div>`;homeScreen.querySelectorAll('[data-app]').forEach(b=>b.onclick=()=>openApp(b.dataset.app));}
-		function appBody(n){if(n==='Regalo')return `<div class="card"><div style="font-size:46px">🎁</div><h3>Algo te espera aquí...</h3><p>Un espacio preparado con mucho cariño.</p><!-- EDITAR DESPUÉS: carta, imágenes, regalo y mensajes especiales. --></div>`;
+		function appBody(n){if(n==='Regalo')return `<div class="card gift-letter"><div style="font-size:46px;text-align:center;margin-bottom:10px;">🎁</div><p>Te quiero muchísimo, más de lo que quizás llegué a imaginar cuando empecé a hacer todo esto. Estos últimos días intenté seguir y terminar el proyecto como lo había planeado, pero creo que al final me jugó un poquito el corazón en contra y continuar haciéndolo terminó haciéndome sentir más mal que bien.</p><p>Aun así, espero de verdad que te guste. Todo lo que ves acá lo hice con muchísimo cariño y con todo el afecto del mundo hacia ti, y eso no cambia.</p><p>Y cuando termines de verlo todo… ¿podríamos hablar un ratito? Hay algunas cosas que me gustaría decirte.</p></div>`;
 		if(n==='Contactos')return `<button class="card" data-contact style="width:100%;text-align:left;background:#ffffff0b">👤 ${birthdayData.contact.name}<br>${birthdayData.contact.phone}</button><div id="contactDetail"></div>`;
 		if(n==='Galería')return `<div class="gallery-grid" data-gallery-grid aria-label="Fotos"></div><div class="gallery-viewer" data-gallery-viewer aria-hidden="true"><div class="gallery-viewer-landscape"><header class="gallery-viewer-bar"><button type="button" data-gallery-close aria-label="Cerrar visor">×</button><span data-gallery-count></span></header><button type="button" class="gallery-viewer-nav" data-gallery-prev aria-label="Foto anterior">‹</button><div class="gallery-photo-stage"><img data-gallery-photo alt=""></div><button type="button" class="gallery-viewer-nav" data-gallery-next aria-label="Foto siguiente">›</button></div></div>`;
 		if(n==='Mensajes')return `<div class="chat-shell"><div class="chat" data-chat-log role="log" aria-live="polite" aria-relevant="additions"></div><div class="chat-typing" data-chat-typing hidden>Jeremy está escribiendo...</div><form class="chat-compose" data-chat-form><input type="text" data-chat-input aria-label="Escribe un mensaje" placeholder="Escribe un mensaje..." autocomplete="off"><button type="submit" aria-label="Enviar mensaje">↑</button></form></div>`;
 		if(n==='Calendario')return `<div class="calendar-app"><div class="calendar-nav"><button type="button" data-month-prev aria-label="Mes anterior">‹</button><h3 data-calendar-title></h3><button type="button" data-month-next aria-label="Mes siguiente">›</button></div><div class="calendar-grid" data-calendar-grid></div><div class="card" id="calendarNote">Toca un día para ver su nota.</div></div>`;
 		if(n==='Notas')return `${birthdayData.notes.map((x,i)=>`<button class="card" data-note="${i}" style="display:block;width:100%;text-align:left;background:#ffffff0b"><b>${x.title}</b><br>${x.date}</button>`).join('')}<div id="noteDetail"></div>`;
 		if(n==='Reloj')return `<div class="card">Alemania<h2 id="berlinClock">--:--</h2></div><div class="card">Lima, Perú<h2 id="limaClock">--:--</h2></div><div id="timeDifference"></div>`;
-		if(n==='Clima')return `<div class="card" style="text-align:center"><div style="font-size:65px">🌤️</div><h2>Pronóstico de hoy</h2><p>Ojalá me lluevan mensajes tuyos.</p><p>Espero que sea un día de 100% felicidad para ti.</p>Felicidad: 100%　Mensajes: ∞<small style="display:block">Pronóstico ficticio cariñoso</small></div>`;
+		if(n==='Clima')return `<div class="card" style="text-align:center"><div style="font-size:65px">🌤️</div><h2>Pronóstico de hoy</h2><p>Ojalá me lluevan mensajes tuyos.</p><p>Espero que sea un día de 100% felicidad para ti.</p>Felicidad: 100%　Mensajes: ∞</div>`;
 		if(n==='Calculadora')return `<input class="calc-display" id="calcDisplay" readonly><div class="calc-grid">${['7','8','9','÷','4','5','6','×','1','2','3','−','C','0','+','='].map(k=>`<button data-key="${k}">${k}</button>`).join('')}</div><div id="calcMessage"></div>`;
 		if(n==='Ajustes')return `<div class="card">Nivel de paciencia conmigo: <span id="patience">84%</span><input type="range" value="84" data-range="patience">Cariño: <span id="affection">∞</span><input type="range" value="100" data-range="affection">Batería social: <span id="social">12%</span><input type="range" value="12" data-range="social"><p>Amistad: <button data-friend aria-pressed="false">Desactivada ○</button></p><div id="friendMsg"></div></div><div class="card">Información del dispositivo<p>Modelo: Katherine<br>Fecha de fabricación: ${birthdayData.settings.birthday}<br>Propietario: ${birthdayData.settings.owner}<br>Versión: Birthday Edition 2026</p></div><div class="card">Si quieres, mándame una captura de cómo dejaste tus ajustes, pofiii.</div>`;
 		return '';}
-		function openApp(n){currentApp=n;const templateId={'Mapa':'mapTemplate','Música':'musicTemplate','Mascota':'petTemplate'}[n];const content=templateId?document.getElementById(templateId).innerHTML:appBody(n);appScreen.dataset.appView={'Galería':'galeria','Música':'musica'}[n]||n;appScreen.innerHTML=`<header class="app-header"><button class="back-button" data-home aria-label="Volver al inicio">⌂</button><h2>${n}</h2></header><div class="app-content">${content}</div>`;appScreen.classList.add('is-visible');appScreen.setAttribute('aria-hidden','false');appScreen.querySelector('[data-home]').onclick=goHome;wireApp(n);}
-		function goHome(){if(journeyFrame!==null){cancelAnimationFrame(journeyFrame);journeyFrame=null;}if(flightFrame!==null){cancelAnimationFrame(flightFrame);flightFrame=null;flightState=null;}if(musicAudio){musicAudio.pause();musicAudio=null;activeTrackIndex=-1;}if(petActionTimer!==null){clearTimeout(petActionTimer);petActionTimer=null;}appScreen.classList.remove('is-visible');appScreen.setAttribute('aria-hidden','true');currentApp='';}
+		function openApp(n){if(constellationCleanup){constellationCleanup();constellationCleanup=null;}currentApp=n;const templateId={'Constelación':'constellationTemplate','Música':'musicTemplate','Mascota':'petTemplate'}[n];const content=templateId?document.getElementById(templateId).innerHTML:appBody(n);appScreen.dataset.appView={'Galería':'galeria','Música':'musica'}[n]||n;appScreen.innerHTML=`<header class="app-header"><button class="back-button" data-home aria-label="Volver al inicio">⌂</button><h2>${n}</h2></header><div class="app-content">${content}</div>`;appScreen.classList.add('is-visible');appScreen.setAttribute('aria-hidden','false');appScreen.querySelector('[data-home]').onclick=goHome;wireApp(n);}
+		function goHome(){if(constellationCleanup){constellationCleanup();constellationCleanup=null;}if(flightFrame!==null){cancelAnimationFrame(flightFrame);flightFrame=null;flightState=null;}if(petActionTimer!==null){clearTimeout(petActionTimer);petActionTimer=null;}appScreen.classList.remove('is-visible');appScreen.setAttribute('aria-hidden','true');currentApp='';}
 		function wireApp(n){let c=appScreen.querySelector('.app-content');
-		if(n==='Mapa')startMapJourney(c);
+		if(n==='Constelación')constellationCleanup=wireConstellation(c);
 		if(n==='Música')wireMusic(c);
 		if(n==='Mensajes')wireMessages(c);
 		if(n==='Contactos')c.querySelector('[data-contact]').onclick=()=>{let x=birthdayData.contact;document.getElementById('contactDetail').innerHTML=`<div class="card"><h3>${x.name}</h3>${Object.entries({Número:x.phone,Apodo:x.nickname,'Fecha en que nos conocimos':x.met,'Cómo nos conocimos':x.story,'Cosas que hacemos juntos':x.together,'Dato especial':x.special}).map(([k,v])=>`<p><b>${k}:</b> ${v}</p>`).join('')}</div>`};
@@ -111,9 +132,29 @@
 			const grid=c.querySelector('[data-gallery-grid]');
 			const viewer=c.querySelector('[data-gallery-viewer]');
 			const photo=c.querySelector('[data-gallery-photo]');
+			const photoStage=c.querySelector('.gallery-photo-stage');
 			const count=c.querySelector('[data-gallery-count]');
 			const closeButton=c.querySelector('[data-gallery-close]');
-			let activeThumbnail=null,pointerStart=null,closeTimer=null;
+			let activeThumbnail=null,closeTimer=null;
+			const galleryState={scale:1,offsetX:0,offsetY:0,dragging:false,gestureMode:null,gestureStartDistance:0,gestureStartScale:1,gestureStartOffsetX:0,gestureStartOffsetY:0,activePointers:new Map(),lastTapTime:0};
+			const clamp=(value,min,max)=>Math.min(Math.max(value,min),max);
+			const applyPhotoTransform=()=>{
+				if(!photoStage)return;
+				const stageWidth=photoStage.clientWidth||1,stageHeight=photoStage.clientHeight||1;
+				const maxOffsetX=(galleryState.scale-1)*(stageWidth/2);
+				const maxOffsetY=(galleryState.scale-1)*(stageHeight/2);
+				galleryState.offsetX=clamp(galleryState.offsetX,-maxOffsetX,maxOffsetX);
+				galleryState.offsetY=clamp(galleryState.offsetY,-maxOffsetY,maxOffsetY);
+				photo.style.transition=galleryState.scale===1?'transform 180ms ease-out':'none';
+				photo.style.transform=`translate(${galleryState.offsetX}px, ${galleryState.offsetY}px) scale(${galleryState.scale})`;
+				photoStage.classList.toggle('is-zoomed',galleryState.scale>1);
+				if(galleryState.scale===1){photoStage.classList.remove('is-dragging');galleryState.dragging=false;}
+			};
+			const resetPhotoZoom=()=>{
+				galleryState.scale=1;galleryState.offsetX=0;galleryState.offsetY=0;galleryState.dragging=false;galleryState.gestureMode=null;galleryState.activePointers.clear();
+				photo.style.transform='translate(0px, 0px) scale(1)';
+				photoStage.classList.remove('is-zoomed','is-dragging');
+			};
 			birthdayData.gallery.forEach((src,index)=>{
 				const thumbnail=document.createElement('button');
 				const image=document.createElement('img');
@@ -127,6 +168,7 @@
 				galleryIndex=(galleryIndex+total)%total;
 				photo.src=birthdayData.gallery[galleryIndex];photo.alt=`Recuerdo ${galleryIndex+1}`;
 				count.textContent=`${galleryIndex+1} / ${total}`;
+				resetPhotoZoom();
 				c.querySelector('[data-gallery-prev]').disabled=total<2;
 				c.querySelector('[data-gallery-next]').disabled=total<2;
 			};
@@ -138,24 +180,81 @@
 			};
 			const closePhoto=()=>{
 				viewer.classList.remove('is-open');viewer.setAttribute('aria-hidden','true');grid.setAttribute('aria-hidden','false');
+				resetPhotoZoom();
 				if(activeThumbnail)activeThumbnail.focus({preventScroll:true});
 				closeTimer=window.setTimeout(()=>viewer.classList.remove('is-visible'),240);
 			};
-			const stepPhoto=direction=>{galleryIndex=(galleryIndex+direction+birthdayData.gallery.length)%birthdayData.gallery.length;renderPhoto();};
+			const stepPhoto=direction=>{if(galleryState.scale>1)return;galleryIndex=(galleryIndex+direction+birthdayData.gallery.length)%birthdayData.gallery.length;renderPhoto();};
+			const setZoom=(nextScale)=>{galleryState.scale=clamp(nextScale,1,4);if(galleryState.scale===1){galleryState.offsetX=0;galleryState.offsetY=0;}applyPhotoTransform();};
 			c.querySelector('[data-gallery-close]').onclick=closePhoto;
 			c.querySelector('[data-gallery-prev]').onclick=()=>stepPhoto(-1);
 			c.querySelector('[data-gallery-next]').onclick=()=>stepPhoto(1);
+			photo.draggable=false;
 			viewer.addEventListener('pointerdown',event=>{
-				if(event.target.closest('button'))return;
-				pointerStart={x:event.clientX,y:event.clientY};viewer.setPointerCapture(event.pointerId);
+				if(event.target.closest('button')||!photoStage.contains(event.target))return;
+				const point={x:event.clientX,y:event.clientY,startX:event.clientX,startY:event.clientY};
+				galleryState.activePointers.set(event.pointerId,point);
+				viewer.setPointerCapture(event.pointerId);
+				if(galleryState.activePointers.size===1){
+					galleryState.gestureMode=galleryState.scale>1?'pan':'swipe';
+					galleryState.gestureStartOffsetX=galleryState.offsetX;galleryState.gestureStartOffsetY=galleryState.offsetY;
+					galleryState.dragging=galleryState.gestureMode==='pan';photoStage.classList.toggle('is-dragging',galleryState.dragging);
+				}else if(galleryState.activePointers.size===2){
+					const [a,b]=[...galleryState.activePointers.values()];
+					galleryState.gestureMode='pinch';galleryState.gestureStartDistance=Math.hypot(a.x-b.x,a.y-b.y);
+					galleryState.gestureStartScale=galleryState.scale;galleryState.gestureStartOffsetX=galleryState.offsetX;galleryState.gestureStartOffsetY=galleryState.offsetY;
+					galleryState.dragging=false;photoStage.classList.remove('is-dragging');
+				}
 			});
-			viewer.addEventListener('pointerup',event=>{
-				if(!pointerStart)return;
-				const deltaX=event.clientX-pointerStart.x,deltaY=event.clientY-pointerStart.y;
-				if(Math.abs(deltaX)>45&&Math.abs(deltaX)>Math.abs(deltaY))stepPhoto(deltaX<0?1:-1);
-				pointerStart=null;
+			viewer.addEventListener('pointermove',event=>{
+				const point=galleryState.activePointers.get(event.pointerId);
+				if(!point)return;
+				point.x=event.clientX;point.y=event.clientY;
+				if(galleryState.gestureMode==='pinch'&&galleryState.activePointers.size===2){
+					const [a,b]=[...galleryState.activePointers.values()];
+					const distance=Math.hypot(a.x-b.x,a.y-b.y);
+					if(galleryState.gestureStartDistance>0){galleryState.scale=clamp(galleryState.gestureStartScale*(distance/galleryState.gestureStartDistance),1,4);galleryState.offsetX=galleryState.gestureStartOffsetX;galleryState.offsetY=galleryState.gestureStartOffsetY;applyPhotoTransform();}
+				}else if(galleryState.gestureMode==='pan'&&galleryState.scale>1){
+					galleryState.offsetX=galleryState.gestureStartOffsetX+(point.x-point.startX);galleryState.offsetY=galleryState.gestureStartOffsetY+(point.y-point.startY);applyPhotoTransform();
+				}
 			});
-			viewer.addEventListener('pointercancel',()=>{pointerStart=null;});
+			const endPointer=(event,cancelled=false)=>{
+				const point=galleryState.activePointers.get(event.pointerId);
+				if(point&&galleryState.activePointers.size===1&&galleryState.gestureMode==='swipe'&&!cancelled){
+					const deltaX=point.x-point.startX,deltaY=point.y-point.startY;
+					if(Math.abs(deltaX)>45&&Math.abs(deltaX)>Math.abs(deltaY))stepPhoto(deltaX<0?1:-1);
+				}
+				galleryState.activePointers.delete(event.pointerId);
+				if(galleryState.activePointers.size===1){
+					const remaining=galleryState.activePointers.values().next().value;
+					remaining.startX=remaining.x;remaining.startY=remaining.y;
+					galleryState.gestureMode=galleryState.scale>1?'pan':'swipe';
+					galleryState.gestureStartOffsetX=galleryState.offsetX;galleryState.gestureStartOffsetY=galleryState.offsetY;
+				}else if(galleryState.activePointers.size===0){
+					galleryState.dragging=false;galleryState.gestureMode=null;galleryState.gestureStartDistance=0;photoStage.classList.remove('is-dragging');
+				}
+			};
+			viewer.addEventListener('pointerup',event=>endPointer(event));
+			viewer.addEventListener('pointercancel',event=>endPointer(event,true));
+			photo.addEventListener('wheel',event=>{
+				event.preventDefault();
+				const nextScale=clamp(galleryState.scale*(event.deltaY<0?1.12:0.9),1,4);
+				if(nextScale===galleryState.scale)return;
+				setZoom(nextScale);
+			},{passive:false});
+			photo.addEventListener('dblclick',event=>{
+				event.preventDefault();
+				setZoom(galleryState.scale>1.2?1:2);
+			});
+			photo.addEventListener('touchstart',event=>{
+				if(event.touches.length===2)return;
+				const now=Date.now();
+				if(now-galleryState.lastTapTime<280){setZoom(galleryState.scale>1.2?1:2);galleryState.lastTapTime=0;}
+				else galleryState.lastTapTime=now;
+			},{passive:true});
+			photoStage.addEventListener('touchmove',event=>{
+				if(event.touches.length>1||galleryState.scale>1)event.preventDefault();
+			},{passive:false});
 			viewer.addEventListener('keydown',event=>{
 				if(!viewer.classList.contains('is-open'))return;
 				if(event.key==='Escape'){event.preventDefault();closePhoto();}
@@ -169,6 +268,69 @@
 		if(n==='Ajustes'){c.querySelectorAll('[data-range]').forEach(i=>i.oninput=()=>document.getElementById(i.dataset.range).textContent=i.dataset.range==='affection'&&i.value==100?'∞':i.value+'%');c.querySelector('[data-friend]').onclick=e=>{let a=e.currentTarget.getAttribute('aria-pressed')!=='true';e.currentTarget.setAttribute('aria-pressed',a);e.currentTarget.textContent=a?'Activada 💜':'Desactivada ○';document.getElementById('friendMsg').textContent=a?'✨ ¡Amistad activada!':'';document.getElementById('friendMsg').classList.toggle('secret-pop',a)}}
 		if(n==='Mascota')wirePet(c);
 		if(n==='Calculadora')c.querySelectorAll('[data-key]').forEach(b=>b.onclick=()=>{let k=b.dataset.key;if(k==='C')calcValue='';else if(k==='='){if(calcValue.replace(/\s/g,'')==='12+29')document.getElementById('calcMessage').textContent=birthdayData.secret;else try{calcValue=String(Function('return ('+calcValue.replace(/×/g,'*').replace(/÷/g,'/').replace(/−/g,'-')+')')())}catch{calcValue='Error'}}else calcValue+=k;document.getElementById('calcDisplay').value=calcValue});}
+
+		function wireConstellation(container){
+			const scene=container.querySelector('[data-constellation-scene]');
+			const art=container.querySelector('[data-constellation-art]');
+			const base=container.querySelector('[data-constellation-base]');
+			const starsLayer=container.querySelector('[data-constellation-stars]');
+			let active=true;
+			const fitImage=()=>{
+				if(!active||!base.naturalWidth)return;
+				const bounds=scene.getBoundingClientRect(),ratio=base.naturalWidth/base.naturalHeight;
+				let width=bounds.width,height=width/ratio;
+				if(height>bounds.height){height=bounds.height;width=height*ratio;}
+				art.style.width=`${width}px`;art.style.height=`${height}px`;
+			};
+			const resizeObserver=new ResizeObserver(fitImage);
+			resizeObserver.observe(scene);
+			const startAnimation=()=>{
+				if(!active||!base.naturalWidth||starsLayer.childElementCount)return;
+				fitImage();
+				for(let index=0;index<88;index++){
+					const star=document.createElement('i');
+					const y=4+Math.random()*35;
+					const x=(y>30?34:37)+Math.random()*(y>30?54:53);
+					const size=1.5+Math.random()*2.3;
+					star.className='constellation-star';
+					star.style.left=`${x}%`;star.style.top=`${y}%`;
+					star.style.width=`${size}px`;star.style.height=`${size}px`;
+					star.style.setProperty('--star-opacity',String(.72+Math.random()*.28));
+					star.style.setProperty('--arrival-delay',`${index*24}ms`);
+					star.style.setProperty('--twinkle-delay',`${index*24+2200}ms`);
+					starsLayer.append(star);
+				}
+				if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+					starsLayer.classList.add('is-complete');
+					return;
+				}
+			};
+			const handleBaseLoad=()=>startAnimation();
+			base.addEventListener('load',handleBaseLoad,{once:true});
+			if(base.complete)startAnimation();
+			return()=>{active=false;resizeObserver.disconnect();base.removeEventListener('load',handleBaseLoad);starsLayer.replaceChildren();};
+		}
+
+		function normalizeChatText(value=''){
+			return String(value || '')
+				.toLowerCase()
+				.normalize('NFD')
+				.replace(/[\u0300-\u036f]/g,'')
+				.replace(/[¿¡?!.,;:]/g,' ')
+				.replace(/\s+/g,' ')
+				.trim();
+		}
+
+		function getChatAutoReply(rawText){
+			const normalized=normalizeChatText(rawText);
+			if(!normalized)return null;
+			for(const rule of birthdayData.chatResponses?.rules || []){
+				if(rule.patterns.some(pattern=>pattern.test(normalized))){
+					return rule.reply;
+				}
+			}
+			return null;
+		}
 
 		function wireMessages(container){
 			const log=container.querySelector('[data-chat-log]');
@@ -205,6 +367,15 @@
 				if(!text)return;
 				const message={from:'Katherine',text};
 				birthdayData.messages.push(message);appendMessage(message);input.value='';
+				const autoReply=getChatAutoReply(text);
+				if(autoReply){
+					typing.hidden=false;scrollToLatest();
+					window.setTimeout(()=>{
+						typing.hidden=true;
+						const reply={from:'Jeremy',text:autoReply};
+						birthdayData.messages.push(reply);appendMessage(reply);
+					},720);
+				}
 				if(!chatIntroSent){chatIntroSent=true;sendFirstMessageReplies();}
 				input.focus();
 			};
@@ -217,14 +388,14 @@
 			const playAllButton=container.querySelector('[data-play-all]');
 			cover.src=birthdayData.playlist.cover;
 			const coverFrame=cover.parentElement;
-			const markCover=()=>{if(cover.naturalWidth)coverFrame.classList.add('has-image');else cover.classList.add('is-missing');};
-			cover.onload=markCover;cover.onerror=markCover;if(cover.complete)markCover();
+			const markCover=()=>{if(cover.naturalWidth){cover.classList.remove('is-missing');coverFrame.classList.add('has-image');}else cover.classList.add('is-missing');};
+			cover.onload=markCover;cover.onerror=markCover;
 			container.querySelector('[data-playlist-title]').textContent=birthdayData.playlist.title;
 			container.querySelector('[data-playlist-description]').textContent=birthdayData.playlist.description;
 			const configuredSongs=birthdayData.songs.map((song,index)=>({song,index})).filter(({song})=>song.title&&song.artist&&song.src);
 			container.querySelector('[data-playlist-meta]').textContent=`${configuredSongs.length} canciones · Para ${birthdayData.owner}`;
 			list.innerHTML=configuredSongs.map(({song,index})=>`<button class="music-track" type="button" data-track="${index}" aria-pressed="false"><span class="track-control" aria-hidden="true">${index+1}</span><img src="${song.cover||birthdayData.playlist.cover}" alt=""><span class="track-copy"><b>${song.title}</b><small>${song.artist}</small></span>${song.duration?`<span class="track-duration">${song.duration}</span>`:''}</button>`).join('');
-			list.querySelectorAll('img').forEach(image=>{const markMissing=()=>{if(!image.naturalWidth)image.classList.add('is-missing');};image.onerror=markMissing;image.onload=markMissing;if(image.complete)markMissing();});
+			list.querySelectorAll('img').forEach(image=>{const markImage=()=>image.classList.toggle('is-missing',!image.naturalWidth);image.onerror=markImage;image.onload=markImage;if(image.complete)markImage();});
 			const refreshTracks=()=>list.querySelectorAll('[data-track]').forEach(button=>{
 				const active=Number(button.dataset.track)===activeTrackIndex;
 				button.classList.toggle('is-active',active);
@@ -236,29 +407,31 @@
 				playAllButton.querySelector('.music-play-symbol').textContent=isPlaying?'Ⅱ':'▶';
 				playAllButton.querySelector('span:last-child').textContent=isPlaying?'Pausar':'Reproducir';
 			};
-			const refreshMusic=()=>{refreshTracks();refreshPlayAll();};
-			const stopCurrent=()=>{if(musicAudio){musicAudio.pause();musicAudio=null;}activeTrackIndex=-1;refreshMusic();};
+			const refreshMusic=()=>{if(currentApp!=='Música'||!container.isConnected)return;refreshTracks();refreshPlayAll();};
+			const setStatus=text=>{if(currentApp==='Música'&&container.isConnected)status.textContent=text;};
+			const stopCurrent=()=>{musicAudio.pause();musicAudio.currentTime=0;activeTrackIndex=-1;refreshMusic();};
+			const setCurrentCover=src=>{cover.classList.remove('is-missing');coverFrame.classList.remove('has-image');cover.src=src;};
+			if(activeTrackIndex>=0){const activeSong=birthdayData.songs[activeTrackIndex];setCurrentCover(activeSong.cover||birthdayData.playlist.cover);setStatus(musicAudio.paused?`En pausa · ${activeSong.title}`:`Reproduciendo · ${activeSong.title}`);}
+			else{setCurrentCover(birthdayData.playlist.cover);setStatus('Elige una canción');}
 			const playTrack=index=>{
 				const song=birthdayData.songs[index];
 				if(!song||!song.src){stopCurrent();status.textContent='Añade un archivo de audio en audio/ para reproducir esta canción.';return;}
 				if(musicAudio&&activeTrackIndex===index){
-					if(musicAudio.paused){musicAudio.play().then(()=>{status.textContent=`Reproduciendo · ${song.title}`;refreshMusic();}).catch(()=>{status.textContent='No se pudo reproducir este archivo de audio.';});}
-					else{musicAudio.pause();status.textContent=`En pausa · ${song.title}`;refreshMusic();}
+					if(musicAudio.paused){musicAudio.play().then(()=>{setStatus(`Reproduciendo · ${song.title}`);refreshMusic();}).catch(()=>{setStatus('No se pudo reproducir este archivo de audio.');});}
+					else{musicAudio.pause();setStatus(`En pausa · ${song.title}`);refreshMusic();}
 					return;
 				}
-				if(musicAudio)musicAudio.pause();
-				const audio=new Audio(song.src);
-				musicAudio=audio;activeTrackIndex=index;refreshMusic();
-				audio.onended=()=>{if(musicAudio===audio){musicAudio=null;activeTrackIndex=-1;status.textContent='Canción terminada';refreshMusic();}};
-				audio.onerror=()=>{if(musicAudio===audio){status.textContent='No se encontró el archivo de audio indicado.';musicAudio=null;activeTrackIndex=-1;refreshMusic();}};
-				audio.play().then(()=>{status.textContent=`Reproduciendo · ${song.title}`;refreshMusic();}).catch(()=>{status.textContent='No se pudo reproducir este archivo de audio.';});
+				musicAudio.pause();musicAudio.src=song.src;musicAudio.load();activeTrackIndex=index;setCurrentCover(song.cover||birthdayData.playlist.cover);refreshMusic();
+				musicAudio.onended=()=>{activeTrackIndex=-1;setStatus('Canción terminada');refreshMusic();};
+				musicAudio.onerror=()=>{setStatus('No se encontró el archivo de audio indicado.');activeTrackIndex=-1;refreshMusic();};
+				musicAudio.play().then(()=>{setStatus(`Reproduciendo · ${song.title}`);refreshMusic();}).catch(()=>{setStatus('No se pudo reproducir este archivo de audio.');});
 			};
 			list.querySelectorAll('[data-track]').forEach(button=>button.onclick=()=>playTrack(Number(button.dataset.track)));
 			playAllButton.onclick=()=>{
-				if(musicAudio){
+				if(activeTrackIndex>=0){
 					if(!musicAudio.paused){musicAudio.pause();status.textContent='Reproducción en pausa';refreshMusic();return;}
 					const song=birthdayData.songs[activeTrackIndex];
-					musicAudio.play().then(()=>{status.textContent=`Reproduciendo · ${song.title}`;refreshMusic();}).catch(()=>{status.textContent='No se pudo reproducir este archivo de audio.';});
+					musicAudio.play().then(()=>{setStatus(`Reproduciendo · ${song.title}`);refreshMusic();}).catch(()=>{setStatus('No se pudo reproducir este archivo de audio.');});
 					return;
 				}
 				const firstTrack=birthdayData.songs.findIndex(song=>song.title&&song.src);
@@ -307,6 +480,7 @@
 
 		function wirePet(container){
 			const cat=container.querySelector('[data-pet-character]');
+			const catVisual=container.querySelector('.pet-cat-visual');
 			const phrase=container.querySelector('[data-pet-phrase]');
 			const affection=container.querySelector('[data-pet-affection]');
 			const coins=container.querySelector('[data-pet-coins]');
@@ -333,7 +507,32 @@
 			};
 			const wake=()=>{if(cat.dataset.mood==='sleeping'){setMood('idle');room.classList.remove('is-night');say('Ya desperté...');return true;}return false;};
 			const showPanel=(title,render)=>{panelTitle.textContent=title;panel.hidden=false;panel.classList.add('is-open');render();};
-			const closePanel=()=>{panel.classList.remove('is-open');panel.hidden=true;};
+			const closePanel=()=>{if(!petState.coat)return;panel.classList.remove('is-open');panel.hidden=true;};
+			const renderCoat=()=>{
+				catVisual.classList.remove(...petCoats.map(item=>`coat-${item.id}`));
+				catVisual.classList.add(`coat-${petState.coat||'black'}`);
+			};
+			const renderCoatSelector=(initial=false)=>{
+				panel.querySelector('[data-pet-close]').hidden=initial;
+				panelContent.innerHTML=`${initial?'<p class="pet-intro-note">Bueno, al menos pude darte un tigre virtual jajaja</p>':''}<div class="pet-coat-grid">${petCoats.map(coat=>`<button type="button" class="pet-coat-choice" data-select-coat="${coat.id}" aria-pressed="${petState.coat===coat.id}"><span class="pet-coat-swatch coat-${coat.id}" style="--coat-color:${coat.color}" aria-hidden="true"></span><span>${coat.name}</span></button>`).join('')}</div>`;
+				panelContent.querySelectorAll('[data-select-coat]').forEach(button=>button.onclick=()=>{
+					petState.coat=button.dataset.selectCoat;savePetState();renderCoat();
+					panel.querySelector('[data-pet-close]').hidden=false;closePanel();
+				});
+			};
+			const renderCodePanel=()=>{
+				panelContent.innerHTML=`<form class="pet-code-form" data-code-form><label for="petCodeInput">Código</label><div><input id="petCodeInput" type="text" data-code-input autocomplete="off" aria-label="Código"><button type="submit">Canjear</button></div><p data-code-message aria-live="polite"></p></form>`;
+				const form=panelContent.querySelector('[data-code-form]');
+				const input=panelContent.querySelector('[data-code-input]');
+				const message=panelContent.querySelector('[data-code-message]');
+				form.onsubmit=event=>{
+					event.preventDefault();
+					if(input.value===petRewardCode&&petState.rewardCodeRedeemed){message.textContent='Este código ya fue canjeado.';return;}
+					if(input.value!==petRewardCode){message.textContent='Código no válido.';return;}
+					petState.rewardCodeRedeemed=true;petState.coins+=200;savePetState();updateHud();
+					message.textContent='Recibiste 200 monedas.';input.value='';
+				};
+			};
 			const renderFoodPanel=()=>{
 				panelContent.innerHTML=`<div class="pet-item-list">${petFoods.map(food=>`<div class="pet-item-row"><span class="pet-item-icon">${food.icon}</span><span class="pet-item-copy"><b>${food.name}</b><small>Quedan ×${petState.foodInventory[food.id]}</small></span><button type="button" data-feed="${food.id}" ${petState.foodInventory[food.id]===0?'disabled':''}>Dar</button></div>`).join('')}</div>`;
 				panelContent.querySelectorAll('[data-feed]').forEach(button=>button.onclick=()=>{
@@ -378,7 +577,7 @@
 			};
 			const renderLookLayers=()=>{const clothes=petClothes.find(item=>item.id===petState.equippedClothes);const wig=petWigs.find(item=>item.id===petState.equippedWig);outfitLayer.innerHTML=clothes?clothes.art:'';wigLayer.innerHTML=wig?wig.art:'';};
 			const setNight=isNight=>{room.classList.toggle('is-night',isNight);};
-			cat.dataset.mood='idle';updateHud();renderLookLayers();
+			cat.dataset.mood='idle';updateHud();renderLookLayers();renderCoat();
 			cat.addEventListener('pointerdown',event=>{pointerStart={x:event.clientX,y:event.clientY};dragged=false;cat.setPointerCapture(event.pointerId);});
 			cat.addEventListener('pointermove',event=>{
 				if(!pointerStart||dragged)return;
@@ -396,6 +595,8 @@
 				if(action==='food'){showPanel('Comida',renderFoodPanel);return;}
 				if(action==='shop'){showPanel('Tienda',()=>renderShop());return;}
 				if(action==='look'){showPanel('Cambiar look',()=>renderLook());return;}
+				if(action==='coat'){showPanel(petState.coat?'Cambiar pelaje':'Elige el pelaje de tu gato',()=>renderCoatSelector(!petState.coat));return;}
+				if(action==='code'){showPanel('Código',renderCodePanel);return;}
 				if(action==='play'){wake();startFlightGame(container);return;}
 				if(action==='sleep'){closePanel();setMood('sleeping');setNight(true);say('Buenas noches...');return;}
 			});
@@ -412,6 +613,7 @@
 				flightState.velocity=-4.5;
 				container.querySelector('[data-flight-ready]').hidden=true;
 			});
+			if(!petState.coat)showPanel('Elige el pelaje de tu gato',()=>renderCoatSelector(true));
 		}
 
 		function startFlightGame(container){
@@ -482,60 +684,6 @@
 			if(flightFrame!==null){cancelAnimationFrame(flightFrame);flightFrame=null;}
 			if(flightState)flightState.running=false;
 			flightState=null;container.querySelector('[data-flight-game]').hidden=true;
-		}
-
-		function startMapJourney(container){
-			const camera=container.querySelector('#mapCamera');
-			const route=container.querySelector('#journeyRoute');
-			const plane=container.querySelector('#journeyPlane');
-			const stageLabel=container.querySelector('#mapStage');
-			const completion=container.querySelector('#mapCompletion');
-			const duration=40000,zoom=1.3,totalLength=route.getTotalLength();
-			const stages=[
-				{start:.14,end:.21,label:'Francia'},
-				{start:.28,end:.35,label:'España'},
-				{start:.42,end:.57,label:'Cruzando el Atlántico...'},
-				{start:.64,end:.72,label:'Brasil'},
-				{start:.78,end:.86,label:'Bolivia'},
-				{start:.92,end:.99,label:'Perú'}
-			];
-			let startedAt=null,lastStage='';
-			route.style.strokeDashoffset='0';
-
-			function animate(timestamp){
-				if(startedAt===null)startedAt=timestamp;
-				const progress=Math.min((timestamp-startedAt)/duration,1);
-				const distance=totalLength*progress;
-				const point=route.getPointAtLength(distance);
-				const ahead=route.getPointAtLength(Math.min(totalLength,distance+3));
-				const behind=route.getPointAtLength(Math.max(0,distance-3));
-				const direction=distance>=totalLength-3?point: ahead;
-				const origin=distance>=totalLength-3?behind:point;
-				const angle=Math.atan2(direction.y-origin.y,direction.x-origin.x)*180/Math.PI+90;
-				const seconds=(timestamp-startedAt)/1000;
-				const driftX=Math.sin(seconds*1.25)*4,driftY=Math.cos(seconds*1.05)*3;
-				camera.setAttribute('transform',`translate(${500-point.x*zoom} ${500-point.y*zoom}) scale(${zoom})`);
-				plane.setAttribute('transform',`translate(${500+driftX} ${500+driftY}) rotate(${angle})`);
-				route.style.strokeDasharray=`${distance} ${totalLength}`;
-
-				const stage=stages.find(item=>progress>=item.start&&progress<item.end);
-				const stageText=stage?stage.label:'';
-				if(stageText!==lastStage){
-					stageLabel.textContent=stageText;
-					stageLabel.classList.toggle('is-visible',Boolean(stageText));
-					stageLabel.setAttribute('aria-hidden',String(!stageText));
-					lastStage=stageText;
-				}
-				if(progress<1)journeyFrame=requestAnimationFrame(animate);
-				else{
-					stageLabel.classList.remove('is-visible');
-					stageLabel.setAttribute('aria-hidden','true');
-					completion.classList.add('is-visible');
-					completion.setAttribute('aria-hidden','false');
-					journeyFrame=null;
-				}
-			}
-			journeyFrame=requestAnimationFrame(animate);
 		}
 
 		function openPassword() {
